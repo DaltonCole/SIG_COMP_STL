@@ -1,0 +1,17 @@
+# [Lists are stupid](http://www.cplusplus.com/reference/list/list/)
+* Doubly-linked list
+	* [] <-> []
+* Constant time insertion
+* Need iterator to point to insertion location...
+
+# [Forward lists are stupider](http://www.cplusplus.com/reference/forward_list/forward_list/)
+* Just like lists but are single-linked-lists instead of doubly-linked-lists
+	* [] -> []
+`
+The main drawback of forward_lists and lists compared to these other sequence containers is that they lack direct access to the elements by their position; For example, to access the sixth element in a forward_list one has to iterate from the beginning to that position, which takes linear time in the distance between these. They also consume some extra memory to keep the linking information associated to each element (which may be an important factor for large lists of small-sized elements).
+`
+
+In summary, just use a vector
+
+# [Array](http://www.cplusplus.com/reference/array/array/)
+* Just like a [] array, but with functions (this is essentially a wrapper)
