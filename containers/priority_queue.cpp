@@ -19,27 +19,29 @@ class Point {
 		// Top returns a const reference to top value, so we need const
 		void print() const {cout << x << ", " << y << endl;}
 
+		bool operator()(const Point& a, const Point& b) {
+		if(a.x != b.x) {
+				return a.x > b.x;
+			}
+			return a.y > b.y;
+		}
+
 	private:
 		int x;
 		int y;
-		friend class Point_comparison;
+		//friend class Point_comparison;
 };
 
 struct Point_comparison {
 	// Smallest first
-	bool operator()(const Point& a, const Point& b) {
-		if(a.x != b.x) {
-			return a.x > b.x;
-		}
-		return a.y > b.y;
-	}
+	
 };
 
 int main() {
 	// Initalize random number generator with time
 	srand (time(NULL));
 
-	priority_queue<Point, vector<Point>, Point_comparison> pq;
+	priority_queue<Point, vector<Point>, Point> pq;
 
 	for(int i = 0; i < 10; i++) {
 		pq.emplace(rand() % 10, rand() % 10);

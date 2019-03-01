@@ -18,9 +18,9 @@ void append_char() {
 }
 
 void increase_many() {
-	//mtx.lock();
+	mtx.lock();
 	many++;
-	//mtx.unlock();
+	mtx.unlock();
 }
 
 int main() {

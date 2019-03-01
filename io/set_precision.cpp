@@ -13,4 +13,6 @@ int main() {
 	cout << setprecision(2) << x << endl;
 	cout << setprecision(100) << x << endl;
 	cout << setprecision(10) << x << endl;
+
+	return 0;
 }

@@ -33,7 +33,7 @@ int main() {
 
 	// Unique Pointer
 	unique_ptr<int> up1(new int(9));
-	// unique_ptr<int> up2 = up1; // Brakes because unique!
+	//unique_ptr<int> up2 = up1; // Brakes because unique!
 	cout << *up1 << endl;
 
 	return 0;
